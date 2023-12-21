@@ -24,9 +24,9 @@ variable "name" {
 variable "plan" {
   type        = string
   description = "The name of the service plan that you choose for your Hyper Protect Crypto Service instance."
-  default     = "standard"
+  default     = "beta"
   validation {
-    condition     = contains(["standard"], var.plan)
+    condition     = contains(["beta"], var.plan)
     error_message = "Only the standard plan is supported currently"
   }
 }
