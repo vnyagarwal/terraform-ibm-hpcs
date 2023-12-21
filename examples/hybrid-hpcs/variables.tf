@@ -1,7 +1,8 @@
 variable "ibmcloud_api_key" {
+  description = "The IBM Cloud API Key used to provision the HPCS instance. If not provided, then resources will be provisioned in the currently logged-in user account."
   type        = string
-  description = "The IBM Cloud API Key."
   sensitive   = true
+  default     = ""
 }
 
 variable "region" {
